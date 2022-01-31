@@ -42,10 +42,17 @@ dino_data %>%
 # Exercise 3
 
 ```{r ex-3}
-# your code for Exercise 3 goes here
+star_data <- datasaurus_dozen %>%
+  filter(dataset == "star")
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+  geom_point()
+```
+```{r}
+star_data %>%
+  summarize(r = cor(x, y))
 ```
 
-YOUR RESPONSE FOR EXERCISE 3 GOES HERE.
+The correlation coefficient for the Dino Data and the Star Data appear to be very similar, they are slightly different. However, not different enough to make a statistical impact in the interpretation. 
 
 
 # Exercise 4
