@@ -14,10 +14,14 @@ library(datasauRus)
 # Exercise 1
 
 ```{r ex-1}
-# your code for Exercise 1 goes here
+table(datasaurus_dozen$dataset)
+datasaurus_dozen %>%
+  count(dataset)
+dim(datasaurus_dozen)
+names(datasaurus_dozen)
 ```
 
-YOUR RESPONSE FOR EXERCISE 1 GOES HERE.
+According to the help file there are 13 rows and 2 columns. The variables included in data drame are: away, bullseye, circle, dino, h_lines, high_lines, slant_down, slant_up, star, v_lines, wide_lines, x_shape. 
 
 
 # Exercise 2
