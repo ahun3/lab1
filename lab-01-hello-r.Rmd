@@ -57,11 +57,19 @@ The correlation coefficient for the Dino Data and the Star Data appear to be ver
 
 # Exercise 4
 
-```{r ex-4}
-# your code for Exercise 4 goes here
+```{r}
+circle_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+  geom_point()
+```
+```{r}
+circle_data %>%
+  summarize(r = cor(x, y))
 ```
 
-YOUR RESPONSE FOR EXERCISE 4 GOES HERE.
+The correlation coefficient for the Dino Data and the Circle Data appear to be very similar, they are slightly different. However, not different enough to make a statistical impact in the interpretation. 
+
 
 # Exercise 5
 
