@@ -27,10 +27,16 @@ According to the help file there are 13 rows and 2 columns. The variables includ
 # Exercise 2
 
 ```{r ex-2}
-# your code for Exercise 2 goes here
+dino_data <- datasaurus_dozen %>%
+  filter(dataset == "dino")
+ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 ```
 
-YOUR RESPONSE FOR EXERCISE 2 GOES HERE.
+```{r}
+dino_data %>%
+  summarize(r = cor(x, y))
+```
 
 
 # Exercise 3
