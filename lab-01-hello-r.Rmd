@@ -2,7 +2,10 @@
 title: "Lab 01 - Hello R!"
 author: "Ashton Hunter"
 date: "01-31-2022"
-output: html_document
+output: 
+  html_document: 
+    fig_height: 7
+    highlight: zenburn
 ---
 
 ```{r load-libraries, include=FALSE}
